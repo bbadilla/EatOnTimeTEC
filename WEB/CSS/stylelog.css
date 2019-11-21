@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+font-family: 'Lato', sans-serif;
+}
+
+body {
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background-color: #9AD1ED;
+}
+
+.login__container {
+background-color: #EFEFEF;
+width: 350px;
+height: auto;
+}
+
+.login__top {
+background-color: #EFEFEF;
+border-top: solid .5rem #303E9F;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 1.2rem 0;
+}
+
+.login__img {
+width: 4rem;
+margin-right: 1rem;
+}
+
+.login__title {
+color:  #303E9F;
+}
+
+.login__title span {
+color: #00457c;
+}
+
+.login__form {
+background: #EFEFEF;
+display: flex;
+flex-direction: column;
+padding: .5rem 2rem 2rem;
+text-align: center;
+}
+
+input[type=text], [type=password] {
+margin: .4rem 0;
+padding: .5rem;
+border: none;
+border-bottom: solid 0.2rem #C8C8C8;
+background: #EFEFEF;
+transition: all .4s
+}
+
+input[type=text]:focus, [type=password]:focus {
+outline: none;
+border-bottom: solid 0.2rem #303E9F;
+
+}
+
+.btn__submit {
+border: none;
+padding: .5rem 0;
+margin: 1rem 0 .3rem;
+background-color: #3F51B5;
+color: white;
+}
+
+.form__recover {
+color: #00457c;
+font-size: 13px;
+text-decoration: nsone;
+}
+.form__recover1 {
+color: #3F51B5 ;
+font-size: 13px;
+text-decoration: none;
+}
+
+.form__recover:hover {
+color: #303E9F;
+}
+
+/*
+ Dark P Color: 	#303E9F
+P Colore:	#3F51B5
+Light P Color:	#C5CBE6
+Text/Icons:	#FFFFFF
+Accent color:	#5D7E8F
+P Text:		#212121
+S Text:		#757575
+Divider color:	#BDBDBD
+*/

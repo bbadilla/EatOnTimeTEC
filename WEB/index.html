@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>EatOnTimeTEC</title>
+	<link rel="stylesheet" href="CSS/styles.css">
+	<script src="https://kit.fontawesome.com/0848ee07dd.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			  $(".wrapper").toggleClass("active")
+			})
+		});
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+
+	<div class="top_navbar">
+		<div class="logo">
+			<a>EatOnTimeTEC</a>
+		</div>
+		<div class="top_menu">
+			<div class="home_link">
+				<a href="inicio.html" target="pages">
+					<span class="icon"><i class="fas fa-home"></i></span>
+					<span>Inicio</span>
+				</a>
+			</div>
+			<div class="right_info">
+					<div class="home_link">
+							<a href="login.html">
+								<span class="icon"><i class="fas fa-user"></i></span>
+								<span>Salir</span>
+							</a>
+							
+						</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main_body">
+		
+		<div class="sidebar_menu">
+	        <div class="inner__sidebar_menu">
+	        	
+	        	<ul>
+					<li>
+					<a href="#">
+						<span class="icon"><i class="fas fa-address-card"></i></span>
+						<span class="list">Perfil</span>
+					</a>
+				    </li>
+		          <li>
+		            <a href="dash.html" target="pages">
+		              <span class="icon"><i class="fas fa-chart-pie"></i></span>
+		              <span class="list">Estadisticas</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a href="#">
+		              <span class="icon"><i class="fas fa-address-book"></i></span>
+		              <span class="list">Roles</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a href="#">
+		              <span class="icon"><i class="fas fa-star-half-alt"></i></span>
+		              <span class="list">Recomendaciones</span>
+		            </a>
+				  </li>
+				  <li>
+						<a >
+						  <span class="icon">
+							  <i class="fas fa-border-all"></i></span>
+						  <span class="list">Reporte</span>
+						</a>
+					  </li>
+		        </ul>
+
+		        <div class="hamburger" >
+			        <div class="inner_hamburger">
+			            <span class="arrow">
+			                <i class="fas fa-long-arrow-alt-left"></i>
+			                <i class="fas fa-long-arrow-alt-right"></i>
+			            </span>
+			        </div>
+			    </div>
+
+	        </div>
+	    </div>
+
+	    <div class="container">
+				<center><iframe frameborder="0" src="inicio.html" width="1100" height="900" name="pages"  scrolling="yes"> </iframe></center>
+	    </div>
+	</div>
+</div>
+	
+
+</body>
+</html>
