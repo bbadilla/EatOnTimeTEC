@@ -4,12 +4,8 @@
 
 
 
-// Image
-var img = new Image(); //img.src = 'http://localhost:3000/dist/img/diagonal_black_30-4x4.png';
-//img.src = 'http://yak.la/public/images/site/_hero/carcosa_00.jpg';
-// img.onload = function () {
-//var fillPattern = ctx.createPattern(img, 'repeat'); //not working
-// };
+
+var img = new Image(); 
 
 var ctx = document.getElementById('barChart');
 var barChart = new Chart(ctx, {
@@ -21,7 +17,7 @@ var barChart = new Chart(ctx, {
       data: [12, 20, 3, 5, 2, 3],
       backgroundColor: ['red', '#fff000', '#0000ff', '#ff33ff', 'salmon', 'rgba(255, 99, 132, 0.75)'],
       borderColor: ['#000000', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-      borderWidth: [2, 2, 2, 2, 2, 2] //borderSkipped: 'right', // not working
+      borderWidth: [2, 2, 2, 2, 2, 2] 
 
     }]
   },
