@@ -1,0 +1,77 @@
+{//Usuario
+    "Id": 0,
+    "Telefono": 0,
+    "Correo": "",
+    "Nombre": "",
+    "Apellido": "",
+    "Provincia": "",
+    "Puntos": 0,
+    "Rol": ["Admin", "AdminMenu", "Cocinero"],
+    "Categorias": ["Pasta", "Carnes", "Vegetariana", "Ensaladas"],
+    "Amigos": [0,0]
+}
+{//Categorias
+	"Nombre": "Pasta",
+	"Puntos": 0
+}
+{//Categorias
+	"Nombre": "Carne",
+	"Puntos": 0
+}
+{//Categorias
+	"Nombre": "Vegetariana",
+	"Puntos": 0
+}
+{//Categorias
+	"Nombre": "Ensalada",
+	"Puntos": 0
+}
+{//Categorias
+	"Nombre": "Punto",
+	"Puntos": 0
+}
+{//Reseñas
+	"Id_Orden": 0,
+	"Estrellas": 0,
+	"Comentario": ""
+}
+{//Platillos
+	"Nombre": "",
+	"Minutos": 0,
+	"Precio": 0,
+	"Info": ["",""],
+	"Receta": ["",""],
+	"Categoria": ""
+}
+{//Ordenes
+	"Id": 0,
+	"Estado": 0,
+	"Minutos": 0,
+	"Progreso": 0,
+	"Observaciones": "",
+	"Fecha": new Date("21/11/2019")
+	"Contenido": [
+		{
+			"Usuario": 0, 
+			"Platillos": ["",""],
+			"Puntos": 0
+		},
+		{
+			"Usuario": 0, 
+			"Platillos": ["",""],
+			"Puntos": 0
+		}
+	]
+}
+{//Menu
+	"Tiempo": "Desayuno",
+	"Platillos": ["",""]
+}
+{//Menu
+	"Tiempo": "Almuerzo",
+	"Platillos": ["",""]
+}
+{//Menu
+	"Tiempo": "Cafe",
+	"Platillos": ["",""]
+}
