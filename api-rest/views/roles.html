@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/recomendaciones.css">
+        <title>Table Edit</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/tableEdit-0.1.js"></script>
+        <script>
+            
+            $(function(){
+                $("#tableEdit").tableEdit({
+                    columnsTr: "2,3",
+                    enableDblClick: true, //enable edit td with dblclick
+                    callback: function(e){
+                        console.log(e.city);
+                        console.log(e.age);
+                        /*
+                         * code for ajax
+                         */
+                    }, 
+                    activeMasks: function(){
+                       console.log("function enable masks");
+                       /*
+                        * function for active masks
+                        */
+                    }
+                });
+            })
+            
+        </script>
+    </head>
+    <body>
+
+
+<br style="clear: both;">
+        <div id="sample1">
+        <table id="tableEdit" align="center">
+            <thead>
+                <tr>
+                    <th>Editar</th>
+                    <th>Nombre</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="javascript:;" class="btEdit">Edit</a></td>
+                    <td ref="type:text, name:nome, class:nomeClasse, id:nomeId">Samuel</td> <!-- ref define all attributes of new input -->
+                    <td ref="type:text, name:city, class:cityClasse, id:cityId">Jundiaí</td> <!-- ref define all attributes of new input -->
+                </tr>
+                <tr>
+                    <td><a href="javascript:;" class="btEdit">Edit</a></td>
+                    <td>Joana</td>
+                    <td>Campinas</td>
+                </tr>
+               
+            </tbody>
+        </table>
+        
+        </div>
+        
+
+        <br/>
+        <br/>
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<script type="text/javascript">
+  let productList = document.createElement('ul')
+  const myHeaders = new Headers();
+  myHeaders.append('authorization', `Bearer ${localStorage.token}`)
+  fetch('/api/platillo', {
+    method: 'GET',
+    headers: myHeaders
+  })
+  .then(res => res.json())
+  .then(data => {
+    data.platillos.map(platillo => {
+      let text = document.createTextNode(platillo.name)
+      let elem = document.createElement('li')
+      elem.appendChild(text)
+      productList.appendChild(elem)
+    })
+    document.body.appendChild(productList)
+  })
+</script>

@@ -1,0 +1,53 @@
+
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="CSS/dash2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/css/main.css">
+
+</head>
+<body>
+
+    <h3>Dashboard</h3>
+    
+    <div class="Dashboard">
+      <div class="Dashboard-item">
+          <h4>Millones de colones en descuentos</h4>
+          <canvas class="chartjs-gauge1" width="100%" height="100%" class="Dashboard-chart"></canvas>
+      </div>
+      <div class="Dashboard-item">
+          <h4>Promedio de quejas diarias</h4>
+          <canvas class="chartjs-gauge2" width="100%" height="100%" class="Dashboard-chart"></canvas>
+      </div>
+      <div class="Dashboard-item">
+          <h4>Usuarios activos</h4>
+          <canvas class="chartjs-gauge3" width="100%" height="100%" class="Dashboard-chart"></canvas>
+      </div>
+      <div class="Dashboard-item">
+          <h4>Satisfaccion promedio por mes</h4>
+          <canvas class="chartjs-gauge4" width="100%" height="100%" class="Dashboard-chart"></canvas>
+      </div>
+      <div class="Dashboard-item ">
+        <h4>Compras por mes</h4>
+        <canvas id="barChart" width="100%" height="100%" class="Dashboard-chart"></canvas>
+      </div>
+     <div class="Dashboard-item">
+        <h4>Dinero asignado en descuentos por mes </h4>
+        <canvas id="lineChart" width="100%" height="100%" class="Dashboard-chart"></canvas>
+      </div>
+      
+    </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="./js/Chart.bundle.min.js"></script>
+  <script  src="./js/dash2.js"></script>
+</body>
+</html>

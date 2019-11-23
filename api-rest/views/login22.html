@@ -1,0 +1,40 @@
+<form id="login" method="post">
+  <input type="text" name="Nombre" value="Nombre" placeholder="Carne/Ced">
+  <br><br>
+  <input type="number" name="Minutos" value="Minutos" placeholder="Nombre">
+  <br><br>
+  <input type="number" name="Precio" value="Precio" placeholder="Apeliido">
+  <br><br>
+  <input type="text" name="Info" value="Info" placeholder="Telefono">
+  <br><br>
+  <input type="text" name="Receta" value="Receta" placeholder="Correo">
+  <br><br>
+  <input type="text" name="Categoria" value="Categoria" placeholder="Categoria Favorita">
+  <br><br>
+  <input type="submit" value="Login">
+</form>
+
+<script type="text/javascript">
+  const formLogin = document.querySelector('#login')
+  const formData = new FormData(formLogin)
+
+  formLogin.addEventListener('submit', event => {
+    event.preventDefault()
+    fetch('/api/platillo', {
+      method: 'POST',
+      body: formData,
+      headers:{
+
+        "Content-Type" : "application/json",
+        Accept : "application/json"
+
+      }
+    })
+    .then(res => res.text())
+    .then(text => console.log(text));
+    //.then(data => {
+      //localStorage.setItem('token', data.token)
+   // })
+  })
+
+</script>

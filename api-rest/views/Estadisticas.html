@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <title>Estadisticas</title>
+    <link rel="stylesheet" href="CSS/g1.css">
+    <script src="zingchart/zingchart.min.js"></script>
+</head>
+<body>
+<div class="row"></div>
+<div id='myChart' class="column">    </div> 
+    <script>
+        var myConfig6 = {
+            "type": "gauge",
+            "scale-r": {
+                "aperture": 200,
+                "values": "0:100:20",
+                "center": {
+                    "size": 5,
+                    "background-color": "#66CCFF #FFCCFF",
+                    "border-color": "none"
+                },
+                "ring": { 
+                    "size": 10,
+                    "rules": [
+                        {
+                            "rule": "%v >= 0 && %v <= 40",
+                            "background-color": "green"
+                        },
+                        {
+                            "rule": "%v >= 40 && %v <= 80",
+                            "background-color": "yellow"
+                        },
+                        
+                        {
+                            "rule": "%v >= 80 && %v <=100",
+                            "background-color": "red"
+                        }
+                    ]
+                }
+            },
+            "plot": {
+                "csize": "5%",
+                "size": "100%",
+                "background-color": "#000000"
+            },
+            "series": [{
+                "values": [65]
+            }]
+        };
+ 
+        zingchart.render({
+            id: 'myChart',
+            data: myConfig6,
+            height: "50%",
+            width: "60%"
+        });
+    </script>
+
+    <div id='myChart1' class="column">     </div> 
+    <script>
+        var myConfig7 = {
+            "type": "gauge",
+            "scale-r": {
+                "aperture": 200,
+                "values": "0:100:20",
+                "center": {
+                    "size": 5,
+                    "background-color": "#66CCFF #FFCCFF",
+                    "border-color": "none"
+                },
+                "ring": { 
+                    "size": 10,
+                    "rules": [
+                        {
+                            "rule": "%v >= 0 && %v <= 40",
+                            "background-color": "green"
+                        },
+                        {
+                            "rule": "%v >= 40 && %v <= 80",
+                            "background-color": "yellow"
+                        },
+                        
+                        {
+                            "rule": "%v >= 80 && %v <=100",
+                            "background-color": "red"
+                        }
+                    ]
+                }
+            },
+            "plot": {
+                "csize": "5%",
+                "size": "100%",
+                "background-color": "#000000"
+            },
+            "series": [{
+                "values": [55]
+            }]
+        };
+ 
+        zingchart.render({
+            id: 'myChart1',
+            data: myConfig7,
+            height: "50%",
+            width: "60%"
+        });
+    </script> 
+    <div id='myChart2' class="column">     </div> 
+    <script>
+        var myConfig8 = {
+            "type": "gauge",
+            "scale-r": {
+                "aperture": 200,
+                "values": "0:100:20",
+                "center": {
+                    "size": 5,
+                    "background-color": "#66CCFF #FFCCFF",
+                    "border-color": "none"
+                },
+                "ring": { 
+                    "size": 10,
+                    "rules": [
+                        {
+                            "rule": "%v >= 0 && %v <= 40",
+                            "background-color": "green"
+                        },
+                        {
+                            "rule": "%v >= 40 && %v <= 80",
+                            "background-color": "yellow"
+                        },
+                        
+                        {
+                            "rule": "%v >= 80 && %v <=100",
+                            "background-color": "red"
+                        }
+                    ]
+                }
+            },
+            "plot": {
+                "csize": "5%",
+                "size": "100%",
+                "background-color": "#000000"
+            },
+            "series": [{
+                "values": [15]
+            }]
+        };
+ 
+        zingchart.render({
+            id: 'myChart2',
+            data: myConfig8,
+            height: "50%",
+            width: "60%"
+        });
+    </script> 
+        <div id='myChart3' class="column">     </div> 
+        <script>
+            var myConfig9 = {
+                "type": "gauge",
+                "scale-r": {
+                    "aperture": 200,
+                    "values": "0:100:20",
+                    "center": {
+                        "size": 5,
+                        "background-color": "#66CCFF #FFCCFF",
+                        "border-color": "none"
+                    },
+                    "ring": { 
+                        "size": 10,
+                        "rules": [
+                            {
+                                "rule": "%v >= 0 && %v <= 40",
+                                "background-color": "green"
+                            },
+                            {
+                                "rule": "%v >= 40 && %v <= 80",
+                                "background-color": "yellow"
+                            },
+                            
+                            {
+                                "rule": "%v >= 80 && %v <=100",
+                                "background-color": "red"
+                            }
+                        ]
+                    }
+                },
+                "plot": {
+                    "csize": "5%",
+                    "size": "100%",
+                    "background-color": "#000000"
+                },
+                "series": [{
+                    "values": [15]
+                }]
+            };
+     
+            zingchart.render({
+                id: 'myChart3',
+                data: myConfig9,
+                height: "50%",
+                width: "60%"
+            });
+        </script> 
+            <div id='myChart4' class="column2"></div>
+            <script>
+                var myConfig10 = {
+                    "type": "line",
+                    "series": [{
+                        "values": [
+                            [0, 20],
+                            [1, 40],
+                            [3, 50],
+                            [4, 15],
+                            [6, 33],
+                            [7, 34]
+                        ]
+                    }]
+                };
+         
+                zingchart.render({
+                    id: 'myChart4',
+                    data: myConfig10,
+                    height: "90%",
+                    width: "100%"
+                });
+            </script>
+            <div id='myChart5' class="column2"></div>
+            <script>
+            
+                var myConfig11 = {
+                    type: "bar",
+                    series: [{
+                            values: [20, 40, 25, 50, 15, 45, 33, 34]
+                        },
+                        {
+                            values: [5, 30, 21, 18, 59, 50, 28, 33]
+                        },
+                        {
+                            values: [30, 5, 18, 21, 33, 41, 29, 15]
+                        }
+                    ]
+                };
+         
+                zingchart.render({
+                    id: 'myChart5',
+                    data: myConfig11,
+                    height: "70%",
+                    width: "100%"
+                });
+            </script>
+    
+    <table class="column3">
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+            </tr>
+          </table>
+
+    </div>
+</html>
