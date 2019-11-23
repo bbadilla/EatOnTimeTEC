@@ -7,6 +7,7 @@ const hbs = require('express-handlebars')
 const app = express();
 const api = require('./routes')
 const path = require('path');
+const parser = require('body-parser');
 
 app.use('/static', express.static('views'))
 
@@ -41,6 +42,18 @@ app.get('/init', (req, res)=>{
   //res.sendFile(path.join(__dirname, '/views/inicio.html'));
 })
 */
+//Verificar
+app.use(parser());
+app.use(express.static("id"));
 
+app.post("/login", function(req,res){
+    var id = req.body.id;
+    if(id == "666"){
+        res.redirect("/init");
+    }else{
+        res.redirect("/static/login.html")
+        
+    }
+});
 
 module.exports = app
