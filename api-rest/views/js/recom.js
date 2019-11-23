@@ -13,10 +13,10 @@ function addTable() {
 
     
     var stock = new Array()
-    stock[0] = new Array("Carros", "88.625", "85.50")
-    stock[1] = new Array("Colores", "88.625", "85.50")
-    stock[2] = new Array("Numeros", "88.625", "85.50")
-    stock[3] = new Array("Peticiones", "88.625", "85.50")
+    stock[0] = new Array("2068", "5", "")
+    stock[1] = new Array("262511", "2", "Le falta mas arroz")
+    stock[2] = new Array("7852", "4", "")
+    stock[3] = new Array("14558", "1", "")
     
     //COLUMNAS DE LA TABLA
     var tr = document.createElement('TR');
