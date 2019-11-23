@@ -34,11 +34,12 @@ function savePlatillo(req, res){
 	console.log(req.body)
 
 	let platillo = new Platillo()
-	platillo.name = req.body.name
-	platillo.picture = req.body.picture
-	platillo.price = req.body.price
-	platillo.category = req.body.category
-	platillo.description = req.body.description
+	platillo.Nombre = req.body.Nombre
+	platillo.Minutos = req.body.Minutos
+	platillo.Precio = req.body.Precio
+	platillo.Info = req.body.Info
+	platillo.Receta = req.body.Receta
+	platillo.Categoria = req.body.Categoria
 
 	platillo.save((err, platilloStored) => {
 		

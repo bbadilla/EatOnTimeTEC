@@ -1,7 +1,20 @@
 'use strict'
 const Categoria = require('../modelos/categoria')
 
+//Get platillo especificp
+function getCategoria(req, res){
+    let categoriaId = req.params.categoriaId
 
+	Categoria.findById(categoriaId, (err, categoria) => {
+		if (err) return res.status(500).send({message: `Error: ${err}`})
+		
+		if (!categoria) return res.status(404).send({message: `Error: ${err}`})
+
+		res.status(200).send({categoria})
+	})
+	
+
+}
 
 //Salvar categorias
 function saveCategoria(req, res){
@@ -36,5 +49,6 @@ function updateCategoria(req, res){
 
 module.exports = {
     saveCategoria,
-    updateCategoria
+	updateCategoria,
+	getCategoria
 }
