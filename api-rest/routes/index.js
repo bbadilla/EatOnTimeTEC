@@ -33,6 +33,8 @@ api.delete('/platillo/:platilloId', platilloCtrl.deletePlatillo )
 //User Registro y LogIn
 api.post('/singup', userCtrl.signUp)
 api.post('/singin', userCtrl.signIn)
+api.get('/user/:userId', userCtrl.getUser)
+
 
 //Privacidad
 //Contiene auth

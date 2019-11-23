@@ -5,11 +5,11 @@ const Platillo = require('../modelos/platillo')
 function getPlatillo(req, res){
     let platilloId = req.params.platilloId
 
-	Platillo.findById(platilloId, (err, platillo) => {
+	Platillo.find({Nombre:req.body.Nombre}, (err, platillo) => {
 		if (err) return res.status(500).send({message: `Error: ${err}`})
 		
 		if (!platillo) return res.status(404).send({message: `Error: ${err}`})
-
+		console.log(platillo)
 		res.status(200).send({platillo})
 	})
 	

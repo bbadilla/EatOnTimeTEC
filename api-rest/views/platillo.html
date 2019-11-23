@@ -2,14 +2,15 @@
   let productList = document.createElement('ul')
   const myHeaders = new Headers();
   myHeaders.append('authorization', `Bearer ${localStorage.token}`)
-  fetch('/api/platillo', {
+  fetch('/api/user/411', {
     method: 'GET',
-    headers: myHeaders
+    headers: myHeaders,
+    body: 411
   })
   .then(res => res.json())
   .then(data => {
     data.platillos.map(platillo => {
-      let text = document.createTextNode(platillo.name)
+      let text = document.createTextNode(platillo.Nombre)
       let elem = document.createElement('li')
       elem.appendChild(text)
       productList.appendChild(elem)

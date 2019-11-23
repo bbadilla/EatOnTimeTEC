@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Bryan Badilla",
   "license": "ISC",
@@ -26,9 +26,12 @@
     "mongoose": "^5.7.12",
     "path": "^0.12.7",
     "pug": "^2.0.4",
+    "request": "^2.88.0",
     "router-express": "^1.5.2"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
     "nodemon": "^1.19.4"
   },
   "keywords": []

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Edit table row inside a popover</title>
-  <link rel='stylesheet' href='CSS/recomendaciones.css'>
+  <link rel='stylesheet' href='/static/CSS/recomendaciones.css'>
 
 </head>
 <body>
@@ -13,6 +13,26 @@
         </div>
 <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script><script  src="js/recom.js"></script>
+
+<script type="text/javascript">
+  let productList = document.createElement('ul')
+  const myHeaders = new Headers();
+  myHeaders.append('authorization', `Bearer ${localStorage.token}`)
+  fetch('/api/resenas/', {
+    method: 'GET',
+    headers: myHeaders
+  })
+  .then(res => res.json())
+  .then(data => {
+    data.platillos.map(platillo => {
+      let text = document.createTextNode(platillo.Nombre)
+      let elem = document.createElement('li')
+      elem.appendChild(text)
+      productList.appendChild(elem)
+    })
+    document.body.appendChild(productList)
+  })
+</script>
 
 </body>
 </html>

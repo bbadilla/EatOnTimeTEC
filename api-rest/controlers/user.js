@@ -3,6 +3,21 @@
 const User = require('../modelos/user')
 const service = require('../services')
 
+//Get usuario especificp
+function getUser(req, res){
+    let userId = req.params.userId
+
+	User.findOne({id: req.body.id},  (err, user) => {
+		if (err) return res.status(500).send({message: `Error: ${err}`})
+		
+		if (!user) return res.status(404).send({message: `Error: ${err}`})
+        console.log(user)
+		res.status(200).send({user})
+	})
+	
+
+}
+
 function signUp(req, res){
     const user = new User({
         id: req.body.id,
@@ -23,7 +38,7 @@ function signUp(req, res){
 }
 
 function signIn(req, res){
-    User.find({id: req.body.id}, (err, user) => {
+    User.findOne({id: req.body.id}, (err, user) => {
         if(err) return res.status(500).send({message: err})
         
         if (!user) return res.status(404).send({message: 'No existe el usuario'})
@@ -38,5 +53,6 @@ function signIn(req, res){
 
 module.exports = {
     signUp,
-    signIn
+    signIn,
+    getUser
 }

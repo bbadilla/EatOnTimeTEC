@@ -48,7 +48,7 @@ app.use(express.static("id"));
 
 app.post("/login", function(req,res){
     var id = req.body.id;
-    if(id == "666"){
+    if(id == "2020" || id == "777" || id == "5555"){
         res.redirect("/init");
     }else{
         res.redirect("/static/login.html")
