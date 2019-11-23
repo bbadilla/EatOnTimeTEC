@@ -1,0 +1,33 @@
+<form id="login" method="post">
+  <input type="number" name="id" value="id" placeholder="Carne/Ced">
+  <br><br>
+  <input type="text" name="name" value="name" placeholder="Nombre">
+  <br><br>
+  <input type="text" name="apellido" value="apellido" placeholder="Apeliido">
+  <br><br>
+  <input type="number" name="telefono" value="telefono" placeholder="Telefono">
+  <br><br>
+  <input type="text" name="correo" value="correo" placeholder="Correo">
+  <br><br>
+  <input type="text" name="categoria" value="categoria" placeholder="Categoria Favorita">
+  <br><br>
+  <input type="submit" value="Login">
+</form>
+
+<script type="text/javascript">
+  const formLogin = document.querySelector('#login')
+  const formData = new FormData(formLogin)
+
+  formLogin.addEventListener('submit', event => {
+    event.preventDefault()
+    fetch('/api/singup', {
+      method: 'POST',
+      body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+      localStorage.setItem('token', data.token)
+    })
+  })
+
+</script>
